@@ -1,0 +1,13 @@
+# tool: scribe-data
+# All Latin (Q397) adverbs and the given forms.
+# Enter this query at https://query.wikidata.org/.
+
+SELECT
+  ?lexeme  # unique ID for the data entry
+  ?adverb  # lemma or label of the ID
+
+WHERE {
+  ?lexeme dct:language wd:Q397 ;  # Latin language
+    wikibase:lexicalCategory wd:Q380057 ;  # adverbs
+    wikibase:lemma ?adverb .
+}
